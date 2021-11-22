@@ -178,7 +178,8 @@ export class Renderer extends Disposable implements IRenderer {
     // will be floored because since lineHeight can never be lower then 1, there
     // is a guarentee that the scaled line height will always be larger than
     // scaled char height.
-    this.dimensions.scaledCellHeight = Math.floor(this.dimensions.scaledCharHeight * this._optionsService.options.lineHeight);
+    // this.dimensions.scaledCellHeight = Math.floor(this.dimensions.scaledCharHeight * this._optionsService.options.lineHeight);
+    this.dimensions.scaledCellHeight = this._optionsService.options.lineHeight;
 
     // Calculate the y coordinate within a cell that text should draw from in
     // order to draw in the center of a cell.
